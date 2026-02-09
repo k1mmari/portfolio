@@ -129,6 +129,21 @@ main {
     background: #5A8AC0;
 }
 
+.hero-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.footer {
+    position: absolute;
+    bottom: 2%;
+    right: 5%;
+    font-size: clamp(14px, 1.5vw, 14px);
+    color: #2C5080;
+    font-family: "Montserrat", sans-serif;
+    z-index: 5;
+}
+
 /* Add this media query at the end of your CSS */
 @media (max-width: 768px) {
     body {
@@ -168,6 +183,7 @@ main {
     .hero {
         height: 100vh;
         position: relative;
+        overflow: scroll;
     }
     
     .frame {
@@ -181,7 +197,7 @@ main {
     .frame img {
         width: 100%;
         height: 100%;
-        object-fit: stretch;
+        object-fit: cover;
     }
     
     .hero-title {
@@ -189,10 +205,19 @@ main {
         left: 5%;
     }
     .port {
-        font-size: clamp(2rem, 8vw, 3rem);
+        font-size: clamp(3.5rem, 8vw, 3rem);
     }
     
     .folio {
-        font-size: clamp(2rem, 8vw, 3rem);
+        font-size: clamp(3.5rem, 8vw, 3rem);
+    }
+    .footer {
+        writing-mode: vertical-rl;
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        writing-mode: vertical-rl;
+        font-size: 10px;
+        z-index: 10;
     }
 }
