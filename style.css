@@ -1,0 +1,198 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Archivo Black", sans-serif;
+}
+
+.hero {
+    width: 100%;
+}
+
+.frame {
+    width: min(92vw, 1800px);
+    margin: 0 auto;
+    position: relative;
+    aspect-ratio: 800 / 448;
+    box-sizing: border-box;
+    /* Remove padding here - we'll handle spacing with the title positioning */
+}
+
+.frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.hero-title {
+    position: absolute;
+    bottom: clamp(20px, 2vw, 80px);
+    left: clamp(20px, 3.5vw, 60px);
+    z-index: 1;
+    color: #fff;
+    font-family: "Archivo Black", sans-serif;
+    text-shadow: 
+        1px 1px 2px rgba(255, 255, 255, 0.4),
+        -1px -1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.port {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.85;
+    letter-spacing: -0.02em;
+    gap: 0;
+    font-weight: 400;
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    margin-bottom: -0.1em;
+}
+
+.port span { 
+    display: block;
+}
+
+.folio {
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    line-height: 1.1;
+}
+/* Main content styles */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(16px, 3vw, 32px) clamp(24px, 5vw, 80px);
+    /* background: rgba(255, 255, 255, 0.95); */
+}
+
+.nav-dots {
+    display: flex;
+    gap: 5px;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.dot-1 { background: #C3B0CA; }
+.dot-2 { background: #799FCE; }
+.dot-3 { background: #518AC2; }
+.dot-4 { background: #B070AC; }
+.dot-5 { background: #F6B793; }
+
+.nav-links {
+    display: flex;
+    gap: clamp(16px, 3vw, 32px);
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2C5080;
+    font-size: clamp(20px, 1.5vw, 16px);
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+.nav-links a.active {
+    background: #2C5080;
+    color: white;
+}
+
+.nav-links a:hover {
+    background: #2C5080;
+    color: white;
+}
+
+.nav-links a.active:hover {
+    background: #5A8AC0;
+}
+
+/* Add this media query at the end of your CSS */
+@media (max-width: 768px) {
+    body {
+        position: relative;
+    }
+    
+    .navbar {
+        position: absolute;
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        flex-direction: row;
+        justify-content: center;
+        gap: 16px;
+        padding: 12px 24px;
+        width: fit-content;
+        border-radius: 50px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-dots {
+        display: none;
+    }
+    
+    .nav-links {
+        gap: 12px;
+    }
+    
+    .nav-links a {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+    
+    /* Hero becomes full-screen background */
+    .hero {
+        height: 100vh;
+        position: relative;
+    }
+    
+    .frame {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        aspect-ratio: unset;
+        margin: 0;
+    }
+    
+    .frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: stretch;
+    }
+    
+    .hero-title {
+        bottom: 5%;
+        left: 5%;
+    }
+    .port {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+    
+    .folio {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+}
