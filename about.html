@@ -22,6 +22,7 @@
     checkDevice();
     window.addEventListener('resize', checkDevice);
 </script>
+
 <body>
     <nav class="navbar">
         <div class="nav-dots">
@@ -37,6 +38,12 @@
             <a href="index.html#personal">personal</a>
         </div>
     </nav>
+
+    <script>
+        document.querySelector('.nav-dots').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
 
     <main class="about-section">
         <div class="frame">

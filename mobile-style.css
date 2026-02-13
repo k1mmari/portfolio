@@ -8,6 +8,8 @@
 body {
     margin: 0;
     font-family: "Archivo Black", sans-serif;
+    background: url('assets/bg.png') center center / cover no-repeat;
+    min-height: 100vh;
 }
 
 /* Navbar - floating pill */
@@ -47,8 +49,7 @@ body {
 
 /* Hero - full background */
 .hero {
-    height: 100vh;
-    background: url('assets/bg.png') center center / cover no-repeat;
+    min-height: 100vh;
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -56,10 +57,15 @@ body {
 }
 
 .hero-content {
-    width: 100%;
+    position: fixed;
+    bottom: 40px;
+    left: 20px;
+    right: 20px;
+    width: calc(100% - 40px);
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    z-index: 5;
 }
 
 .hero-title {
