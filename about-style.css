@@ -44,6 +44,7 @@ body {
     align-items: center;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
+    font-size: clamp(14px, 1.5vw, 18px);
 }
 
 .nav-links a {
@@ -70,53 +71,72 @@ body {
 }
 
 /* About Section - same structure as index.html */
-.about-section {
+.main-section {
     width: 100%;
 }
 
 .frame {
-    width: min(92vw, 1800px);
+    width: min(92vw, 1440px);
     margin: 0 auto;
     position: relative;
-    aspect-ratio: 800 / 448;
-    box-sizing: border-box;
-}
-
-.frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-.about-section {
-    width: 100%;
-    position: relative;
+    background-image: url("assets/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: white;
+    margin: 0 auto 40px auto;
+    overflow: hidden;
 }
 
 .about-content {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     height: 100%;
-    background: rgba(100, 140, 200, 0.4);
-    backdrop-filter: blur(2px);
     padding: clamp(30px, 5vw, 60px) clamp(40px, 6vw, 80px);
-    color: white;
     z-index: 1;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    gap: 20px; /* Space between cards */
+}
+
+.about-card {
+    width: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(44, 80, 128, 0.6),
+        rgba(121, 159, 206, 0.6)
+    );
+    backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 20px;
+    padding: clamp(20px, 3vw, 35px);
+    display: flex;
+    flex-direction: column;
+    text-align: left;;
+    gap: 30px;
+    flex-shrink: 0;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+.project-info {
+    flex: 1;
+    color: white;
+    overflow: hidden;
 }
 
 .contact-info {
     display: flex;
     justify-content: flex-end;
-    gap: 20px;
-    margin-bottom: 30px;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 .contact-item {
@@ -133,22 +153,27 @@ body {
     font-size: 16px;
     line-height: 1;
     vertical-align: middle;
-}
-
+} 
 .name {
     font-family: "Archivo Black", sans-serif;
     font-size: clamp(2rem, 5vw, 3.5rem);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .title {
     font-size: clamp(0.9rem, 1.5vw, 1.2rem);
     font-style: italic;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     opacity: 0.95;
 }
 
+.project-title {
+    font-family: "Archivo Black", sans-serif;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    color: #F6B793;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
 .section {
     margin-bottom: 25px;
 }

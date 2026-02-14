@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="personal-style.css">
+    <!--- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <!--- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<script>
+    function checkDevice() {
+        if (window.innerWidth <= 768) {
+            window.location.href = 'projects-mobile.html';
+        }
+    }
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+</script>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-dots">
+            <span class="dot dot-1"></span>
+            <span class="dot dot-2"></span>
+            <span class="dot dot-3"></span>
+            <span class="dot dot-4"></span>
+            <span class="dot dot-5"></span>
+        </div>
+        <div class="nav-links">
+            <a href="about.html">about</a>
+            <a href="projects.html">projects</a>
+            <a href="personal.html" class="active">personal</a>
+        </div>
+    </nav>
+
+    <script>
+        document.querySelector('.nav-dots').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+
+    <main class="main-section">
+        <div class="frame">
+            <div class="project-content">
+                <!--- 585 project -->
+                <div class="project-card">
+                    <div class="project-info">
+                            <h2 class="project-title">Modern Hotel Website</h2>
+                    </div>
+                    <img src="assets/hotel.png" alt="Hotel Screenshot" class="project-image"/>
+                </div>
+    
+                <!--- Landing Page -->
+                <div class="project-card">
+                    <div class="project-info">
+                            <h2 class="project-title">Landing Page Vibes</h2>
+                    </div>
+                    <img src="assets/landing.png" alt="Landing Page Screenshot" class="project-image"/>
+                </div>
+
+                <!--- Music Player -->
+                <div class="project-card">
+                    <div class="project-info">
+                            <h2 class="project-title">Music Player</h2>
+                    </div>
+                        <img src="assets/music_player.png" alt="Music Player Screenshot" class="project-image"/>
+                    </div>
+
+                <!--- Package -->
+                <div class="project-card">
+                    <div class="project-info">
+                            <h2 class="project-title">Package History</h2>
+                    </div>
+                    <img src="assets/packaging.png" alt="MangoBooks App Screenshot" class="project-image"/>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

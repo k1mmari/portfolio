@@ -132,10 +132,15 @@ body {
     overflow: hidden;
 }
 
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between title and stack */
+}
+
 .project-title {
     font-family: "Archivo Black", sans-serif;
     font-size: clamp(1.5rem, 4vw, 3rem);
-    margin-bottom: 15px;
     color: #F6B793;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
@@ -145,6 +150,11 @@ body {
     line-height: 1.6;
     color: white;
     width: 85%;
+}
+
+.stack {
+    height: clamp(1rem, 1.5vw, 1.3rem);
+    width: auto;
 }
 
 .project-image {
