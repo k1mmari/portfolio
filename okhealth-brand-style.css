@@ -148,18 +148,14 @@ body {
         -webkit-backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 20px;
-    padding: clamp(20px, 3vw, 35px);
+    padding: clamp(15px, 2vw, 25px);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 30px;
     flex-shrink: 0;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.project-card:last-child {
-    margin-bottom: clamp(30px, 5vw, 60px);
 }
 
 .project-info {
@@ -187,8 +183,8 @@ body {
     line-height: 1.6;
     color: white;
     width: 100%;
-    margin-top: 10px;
     margin-left: 10px;
+    margin-top: 10px;
 }
 
 .stack {
@@ -197,21 +193,13 @@ body {
 }
 
 .project-image {
-    width: clamp(100px, 10vw, 160px);
+    width: clamp(250px, 15vw, 300px);
     max-height: 100%;
     height: auto;
     object-fit: contain;
     border-radius: 10px;
     margin-top: 10px;
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));
-}
-
-.image-wrapper {
-    display: flex;
-    gap: 42px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* allows responsiveness */
 }
 
 .project-media {
@@ -221,6 +209,7 @@ body {
     object-fit: contain;
     border-radius: 10px;
     margin-top: 10px;
+    margin-left: auto;
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));
 }
 
@@ -263,4 +252,10 @@ h1 {
         rgba(28, 53, 87, 0.6),
         rgba(68, 101, 141, 0.6)
     );
+}
+
+.shop {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
 }
