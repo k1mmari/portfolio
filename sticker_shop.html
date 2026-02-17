@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: white;
+        }
+
+        .single-image {
+            width: clamp(150px, 40vw, 600px);
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .caption {
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            margin-top: 16px;
+            font-size: clamp(18px, 2vw, 25px);
+            color: #2C5080;;
+        }
+    </style>
+</head>
+<script>
+    setTimeout(function() {
+        window.location.href = 'quackwell-brand.html'; // Change to your page
+    }, 5000);
+</script>
+<body>
+    <img src="assets/knife.gif" alt="Angry duck with knife" class="single-image"/>
+    <p class="caption">you thought you could buy me????</p>
+</body>
+</html>

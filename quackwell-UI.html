@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quackwell UI</title>
+    <link rel="stylesheet" href="quackwell-UI-style.css">
+    <!--- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <!--- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<script>
+    function checkDevice() {
+        if (window.innerWidth <= 768) {
+            window.location.href = 'projects-mobile.html';
+        }
+    }
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+</script>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-dots">
+            <span class="dot dot-1"></span>
+            <span class="dot dot-2"></span>
+            <span class="dot dot-3"></span>
+            <span class="dot dot-4"></span>
+            <span class="dot dot-5"></span>
+        </div>
+        <div class="nav-links">
+            <a href="about.html">about</a>
+            <a href="projects.html" class="active">projects</a>
+            <a href="personal.html">personal</a>
+        </div>
+    </nav>
+
+    <script>
+        document.querySelector('.nav-dots').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+
+    <main class="main-section">
+        <div class="frame">
+            <div class="project-content">
+                
+                <!--- Quackwell -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h2 class="project-title">Quackwell</h2>
+                            <img src="assets/quackwell_stack.png" alt="Quackwell Tech Stack" class="stack"/>
+
+                            <nav class="navbar-inside">
+                                <div class="nav-links-inside">
+                                    <a href="quackwell">overview</a>
+                                    <a href="quackwell-brand.html">brand</a>
+                                    <a href="quackwell-UI.html" class="active">UI</a>
+                                    <a href="quackwell-UX.html">UX</a>
+                                </div>
+                            </nav>
+                        </div>
+                        
+                        <!-- Color Palette -->
+                        <div class="my-role">
+                            <div class="header-wrapper">
+                                <img src="assets/palette_icon.png" class="icons"/>
+                                <h1>Color Palette</h1>
+                            </div>
+                            <p class="project-description">A pastel color palette was chosen to align with the mascot and
+                                create a cohesive visual identity while remaining easy on the eyes during prolonged use.
+                                These softer tones help reduce visual fatigue and support a calm, approachable experience.
+                                The primary colorway pairs warm orange-yellow tones with cool blues. As complementary colors,
+                                they create visual balance and contrast while maintaining clarity and usability
+                                across the interface.</p>
+                        </div>
+                        <!-- Main Hub -->
+                        <div class="my-role">
+                            <div class="header-wrapper">
+                                <img src="assets/hub_icon.png" class="icons"/>
+                                <h1>Main Hub</h1>
+                            </div>
+                            <p class="project-description">In the first iteration, the app used a plain background, which
+                                felt visually flat and lacked context. To better ground the mascot in the interface, I
+                                introduced a “room” environment inspired by common patterns in similar apps (e.g., Finch).
+                                The room transitions from a bright, sunlit living space to a calmer bedroom depending on
+                                the time of day, reinforcing a sense of continuity and helping the pet feel aligned with the
+                                user’s daily rhythm.</p>
+                                
+                                <div class="image-wrapper">
+                                    <img src="assets/mainHubOld.png" alt="Quackwell Old Ver of Main Hub" class="project-image"/>
+                                    <video class="project-media clip" data-start="0" data-end="1.7" autoplay muted playsinline>
+                                        <source src="/assets/mainHubDay.MP4" type="video/mp4">
+                                    </video>
+
+                                    <img src="assets/mainhubNight.png" alt="Quackwell Main Hub Night" class="project-image"
+                                    style="width: clamp(110px, 11vw, 175px); max-width: 70%;"/>
+                                </div>
+                                <p class="project-description">The initial navigation bar was redesigned to improve clarity and usability.
+                                    While the original 3D, inflated icons matched the overall aesthetic, simpler vector icons were ultimately
+                                    chosen to make navigation more immediately recognizable and easier to scan.</p>
+                            </div>
+
+                            <!-- Components-->
+                            <div class="my-role">
+                                <div class="header-wrapper">
+                                    <img src="assets/component_icon.png" class="icons"/>
+                                    <h1>Components</h1>
+                                </div>
+                                <p class="project-description">To simplify implementation and improve maintainability,
+                                    the interface was built using reusable components such as buttons and input fields.
+                                    This approach ensured visual consistency across the app and aligned well with React Native’s
+                                    component-based architecture.</p>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const clips = document.querySelectorAll("video.clip");
+
+            clips.forEach((video) => {
+            const start = parseFloat(video.dataset.start || "0");
+            const end = parseFloat(video.dataset.end || String(video.duration || 9999));
+
+            video.addEventListener("loadedmetadata", () => {
+                video.currentTime = start;
+                video.play().catch(() => {}); // ignore autoplay blocks
+            });
+
+            video.addEventListener("timeupdate", () => {
+                if (video.currentTime >= end) {
+                    video.currentTime = start;
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

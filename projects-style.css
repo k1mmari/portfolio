@@ -8,7 +8,7 @@
 body {
     margin: 0;
     font-family: "Montserrat", sans-serif;
-    min-height: 100vh;
+    background: #f0f0f0;
 }
 
 /* Navbar */
@@ -76,27 +76,26 @@ body {
 
 .frame {
     width: min(92vw, 1800px);
-    max-height: 1440px;
-    margin: 0 auto;
-    position: relative;
     background-image: url("assets/bg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow: hidden;
+    background-position: top center;
+    margin: 0 auto;
+    position: relative;
 }
 
 .project-content {
+    overflow: hidden;
     position: relative;
     width: 100%;
-    height: 100%;
-    padding: clamp(30px, 5vw, 60px) clamp(40px, 6vw, 80px);
+    padding: clamp(30px, 5vw, 60px) clamp(40px, 6vw, 80px) 24px;
     z-index: 1;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column; /* Stack cards vertically */
-    gap: 20px; /* Space between cards */
-    overflow-y: auto;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 auto 50px auto;
 }
 
 .project-card {
@@ -168,3 +167,13 @@ body {
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));
 }
 
+.project-card-link {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+.project-card-link:hover .project-card {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
