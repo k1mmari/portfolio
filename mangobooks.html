@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MangoBooks</title>
+    <link rel="stylesheet" href="styles/mangobooks-style.css">
+    <!--- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <!--- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<script>
+    function checkDevice() {
+        if (window.innerWidth <= 768) {
+            window.location.href = 'mangobooks-mobile.html';
+        }
+    }
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+</script>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-dots">
+            <span class="dot dot-1"></span>
+            <span class="dot dot-2"></span>
+            <span class="dot dot-3"></span>
+            <span class="dot dot-4"></span>
+            <span class="dot dot-5"></span>
+        </div>
+        <div class="nav-links">
+            <a href="about.html">about</a>
+            <a href="projects.html" class="active">projects</a>
+            <a href="personal.html">personal</a>
+        </div>
+    </nav>
+
+    <script>
+        document.querySelector('.nav-dots').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+
+    <main class="main-section">
+        <div class="frame">
+            <div class="project-content">
+                <div class="project-card">
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h2 class="project-title">MangoBooks</h2>
+                            <img src="assets/figma.png" alt="Figma Logo" class="stack"/>
+
+                            <nav class="navbar-inside">
+                                <div class="nav-links-inside">
+                                    <a href="mangobooks.html" class="active">overview</a>
+                                    <a href="mangobooks_brand.html">brand</a>
+                                    <a href="mangobooks-UI.html">UI</a>
+                                    <a href="mangobooks-UX.html">UX</a>
+                                </div>
+                            </nav>
+                        </div>
+                        <p class="project-description">A CPA firm website designed to provide clear information about services,
+                            contact details, and client resources, while establishing trust and professionalism for prospective and
+                            existing clients.</p>
+                        <div class="image-wrapper">
+
+                            <img src="assets/landing1.png" alt="MangoBooks Landing Frame 1" class="project-image"/>
+                            <img src="assets/mangobooks_landing.png" alt="MangoBooks Landing Frame 2" class="project-image"/>
+                            
+                        </div>
+                        <p class="project-description" style="font-size: small;">*names, phones, maps were omitted for privacy</p>
+                        <!-- My Role -->
+                        <div class="my-role">
+                            <div class="header-wrapper">
+                                <img src="assets/role_icon.png" class="icons"/>
+                                <h1>My Role</h1>
+                            </div>
+                            <p class="project-description">I led the full redesign of the website, including visual design and
+                                information architecture. The project was completed within a two-week timeline to meet the client’s request
+                                for a rapid turnaround.</p>
+                        </div>
+
+                        <!-- Target Audience -->
+                        <div class="my-role">
+                            <div class="header-wrapper">
+                                <img src="assets/target_icon.png" class="icons"/>
+                                <h1>Target Audience</h1>
+                            </div>
+                            <p class="project-description">Aimed at individuals and small business owners seeking accounting
+                                services, with a focus on users who are not financially or technically specialized and need clear,
+                                trustworthy information.</p>
+                        </div>
+
+                        <!-- Problem Statement -->
+                        <div class="my-role">
+                            <div class="header-wrapper">
+                                <img src="assets/problem_icon.png" class="icons"/>
+                                <h1>Problem Statement</h1>
+                            </div>
+                            <p class="project-description">The previous website did not align with the firm’s brand,
+                                presenting a dark, overly technical visual style and a confusing information structure that made
+                                it difficult for users to navigate and understand services.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const clips = document.querySelectorAll("video.clip");
+
+            clips.forEach((video) => {
+            const start = parseFloat(video.dataset.start || "0");
+            const end = parseFloat(video.dataset.end || String(video.duration || 9999));
+
+            video.addEventListener("loadedmetadata", () => {
+                video.currentTime = start;
+                video.play().catch(() => {}); // ignore autoplay blocks
+            });
+
+            video.addEventListener("timeupdate", () => {
+                if (video.currentTime >= end) {
+                    video.currentTime = start;
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

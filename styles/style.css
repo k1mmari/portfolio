@@ -1,0 +1,129 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Archivo Black", sans-serif;
+}
+
+.main-section {
+    width: 100%;
+    background: white;
+}
+
+.frame {
+    width: min(92vw, 1800px);
+    margin: 0 auto;
+}
+
+
+.hero-image {
+    width: 100%;
+    max-width: 1800px;
+    display: block;
+}
+
+.hero-title {
+    position: absolute;
+    bottom: clamp(20px, 2vw, 80px);
+    left: clamp(20px, 3.5vw, 60px);
+    z-index: 1;
+    color: #fff;
+    font-family: "Archivo Black", sans-serif;
+    text-shadow: 
+        1px 1px 2px rgba(255, 255, 255, 0.4),
+        -1px -1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.port {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.85;
+    letter-spacing: -0.02em;
+    gap: 0;
+    font-weight: 400;
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    padding: 0 clamp(2rem, 4vw, 5rem)
+}
+
+.port span { 
+    display: block;
+}
+
+.folio {
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    line-height: 1.1;
+    padding: 0 clamp(2rem, 4vw, 5rem)
+}
+/* Main content styles */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(16px, 3vw, 32px) clamp(24px, 5vw, 80px);
+    /* background: rgba(255, 255, 255, 0.95); */
+}
+
+.nav-dots {
+    display: flex;
+    gap: 5px;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.dot-1 { background: #C3B0CA; }
+.dot-2 { background: #799FCE; }
+.dot-3 { background: #518AC2; }
+.dot-4 { background: #B070AC; }
+.dot-5 { background: #F6B793; }
+
+.nav-links {
+    display: flex;
+    gap: clamp(16px, 3vw, 32px);
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2C5080;
+    font-size: clamp(20px, 1.5vw, 16px);
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+.nav-links a.active {
+    background: #2C5080;
+    color: white;
+}
+
+.nav-links a:hover {
+    background: #2C5080;
+    color: white;
+}
+
+.nav-links a.active:hover {
+    background: #5A8AC0;
+}
+
+.hero-container {
+    position: relative;
+    min-height: 100vh;
+}
