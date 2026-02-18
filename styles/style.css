@@ -29,8 +29,8 @@ body {
 
 .hero-title {
     position: absolute;
-    bottom: clamp(20px, 2vw, 80px);
-    left: clamp(20px, 3.5vw, 60px);
+    bottom: clamp(20px, 6vw, 80px);
+    left: clamp(20px, 4vw, 60px);
     z-index: 1;
     color: #fff;
     font-family: "Archivo Black", sans-serif;
@@ -47,7 +47,8 @@ body {
     gap: 0;
     font-weight: 400;
     font-size: clamp(2.5rem, 7vw, 5.5rem);
-    padding: 0 clamp(2rem, 4vw, 5rem)
+    padding: 0;
+    margin: 0;
 }
 
 .port span { 
@@ -59,7 +60,9 @@ body {
     font-weight: 400;
     letter-spacing: 0.15em;
     line-height: 1.1;
-    padding: 0 clamp(2rem, 4vw, 5rem)
+    padding: 0;              /* remove the big padding */
+    margin-top: -0.8em;      /* pulls FOLIO upward a bit (tweak) */
+    line-height: 1;
 }
 /* Main content styles */
 main {
