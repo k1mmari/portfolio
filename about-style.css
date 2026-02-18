@@ -142,7 +142,7 @@ body {
 .contact-item {
     color: white;
     text-decoration: none;
-    font-size: clamp(11px, 1.2vw, 14px);
+    font-size: clamp(13px, 1.5vw, 16px);
     display: inline-flex;
     align-items: center;
     gap: 6px;

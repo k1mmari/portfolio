@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OKHealth UX</title>
+    <link rel="stylesheet" href="okhealth-UX-style.css">
+    <!--- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <!--- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<script>
+    function checkDevice() {
+        if (window.innerWidth <= 768) {
+            window.location.href = 'projects-mobile.html';
+        }
+    }
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+</script>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-dots">
+            <span class="dot dot-1"></span>
+            <span class="dot dot-2"></span>
+            <span class="dot dot-3"></span>
+            <span class="dot dot-4"></span>
+            <span class="dot dot-5"></span>
+        </div>
+        <div class="nav-links">
+            <a href="about.html">about</a>
+            <a href="projects.html">projects</a>
+            <a href="personal.html" class="active">personal</a>
+        </div>
+    </nav>
+    <!-- the dots go back to the landing -->
+    <script>
+        document.querySelector('.nav-dots').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+
+    <main class="main-section">
+        <div class="frame">
+            <div class="project-content">
+                <div class="project-card">
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h2 class="project-title">OKHealth</h2>
+                            <img src="assets/okhealth_stack.png" alt="OKHealth Tech Stack" class="stack"/>
+
+                            <nav class="navbar-inside">
+                                <div class="nav-links-inside">
+                                    <a href="okhealth.html">overview</a>
+                                    <a href="okhealth-brand.html">brand</a>
+                                    <a href="okhealth-UI.html">UI</a>
+                                    <a href="okhealth-UX.html" class="active">UX</a>
+                                </div>
+                            </nav>
+                        </div>
+                        <!-- Onboarding -->
+                        <div class="my-role">
+                            <div class="header-wrapper">
+                                <img src="assets/onboarding_icon.png" class="icons"/>
+                                <h1>Onboarding</h1>
+                            </div>
+                            <p class="project-description">While the system does not strictly require a dedicated onboarding flow,
+                                it was designed to be accessible to users of varying ages and levels of computer literacy. Given the
+                                formal context of a medical application, a light onboarding layer provides reassurance and orientation
+                                without adding unnecessary friction.</p>
+                                <div class="image-wrapper">
+
+                                    <img src="assets/onboarding1.png" alt="OKHealth Doctor Search Frame Screenshot" class="project-image"/>
+
+                                    <img src="assets/onboarding2.png" alt="OKHealth Sign Up Frame Screenshot" class="project-image"/>
+
+                                    <img src="assets/onboarding3.png" alt="OKHealth Sign Up Frame Screenshot" class="project-image"/>
+
+                                    <img src="assets/onboarding4.png" alt="OKHealth Sign Up Frame Screenshot" class="project-image"/>
+
+                                </div>
+                                <p class="project-description">The onboarding flow introduces the app’s core navigation logic,
+                                    which serves as the primary interaction point for users. Selecting a navigation tab updates the
+                                    content panel on the right, helping users quickly understand how information is structured. The
+                                    onboarding flow remains fully skippable for users who do not require additional guidance.</p>
+                            </div>
+                        <!-- No Wheel -->
+                        <div class="my-role">
+                            <div class="header-wrapper">
+                                <img src="assets/wheel_icon.png" class="icons"/>
+                                <h1>No Wheel Reinventing</h1>
+                            </div>
+                            <p class="project-description">To minimize friction, the interface follows established conventions for element
+                                placement. Core components such as the navigation bar and calendar remain persistently visible, ensuring
+                                quick access at all times. The AI chatbot is positioned at the bottom of the interface, aligning with common
+                                web patterns and user expectations.</p>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

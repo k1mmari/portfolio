@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OKHealth UI</title>
+    <link rel="stylesheet" href="okhealth-UI-style.css">
+    <!--- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <!--- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<script>
+    function checkDevice() {
+        if (window.innerWidth <= 768) {
+            window.location.href = 'projects-mobile.html';
+        }
+    }
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+</script>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-dots">
+            <span class="dot dot-1"></span>
+            <span class="dot dot-2"></span>
+            <span class="dot dot-3"></span>
+            <span class="dot dot-4"></span>
+            <span class="dot dot-5"></span>
+        </div>
+        <div class="nav-links">
+            <a href="about.html">about</a>
+            <a href="projects.html" class="active">projects</a>
+            <a href="personal.html">personal</a>
+        </div>
+    </nav>
+    <!-- the dots go back to the landing -->
+    <script>
+        document.querySelector('.nav-dots').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+
+    <main class="main-section">
+        <div class="frame">
+            <div class="project-content">
+                
+                <!--- Quackwell -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h2 class="project-title">OKHealth</h2>
+                            <img src="assets/okhealth_stack.png" alt="OKHealth Tech Stack" class="stack"/>
+
+                            <nav class="navbar-inside">
+                                <div class="nav-links-inside">
+                                    <a href="okhealth.html">overview</a>
+                                    <a href="okhealth-brand.html">brand</a>
+                                    <a href="okhealth-UI.html" class="active">UI</a>
+                                    <a href="okhealth-UX.html">UX</a>
+                                </div>
+                            </nav>
+                        </div>
+                        <!-- Sign Up Flow -->
+                        <div class="my-role">
+                            <div class="header-wrapper">
+                                <img src="assets/palette_icon.png" class="icons"/>
+                                <h1>Color Palette</h1>
+                            </div>
+                            <p class="project-description">A monochromatic blue palette was chosen for the interface due to its
+                                calming qualities and association with reduced visual stress. Since this is a scheduling system used for
+                                extended periods of time, the color choice prioritizes long-term comfort and focus. Whites and varied blue shades with adjusted opacity were used for text and interactive elements to maintain clear contrast while preserving a cohesive, unobtrusive visual hierarchy.
+                            </p>
+                                <div class="image-wrapper">
+
+                                    <img src="assets/okhealth_search.png" alt="OKHealth Doctor Search Frame Screenshot" class="project-image"/>
+
+                                    <img src="assets/okhealth_signup.png" alt="OKHealth Sign Up Frame Screenshot" class="project-image"/>
+
+                                </div>
+                                <p class="project-description">Choosing email sign-up leads to a short form.
+                                    The app asks only for what it actually needs. A wellness app built around encouragement doesn’t need
+                                    your full life story, and adding friction here would work against the tone set earlier.
+                                    You land in the Main Hub — the center of the app. From here, every core feature is reachable,
+                                    giving you orientation immediately instead of making you hunt for it.</p>
+                            </div>
+                        <!-- No Wheel -->
+                        <div class="my-role">
+                            <div class="header-wrapper">
+                                <img src="assets/responsiveness_icon.png" class="icons"/>
+                                <h1>Responsiveness</h1>
+                            </div>
+                            <p class="project-description">Wherever possible, Quackwell sticks to established mobile interaction patterns.
+                                Familiar gestures and visual conventions are used intentionally—destructive actions behave as expected,
+                                expandable content is predictable, icons stay recognizable, and progress is shown through familiar circular
+                                indicators. This keeps cognitive load low and lets users focus on their habits, not the interface.</p>
+                                <div class="image-wrapper">
+                                    <img src="assets/mobile2.png" alt="OKHealth Sign Up Frame Screenshot" class="project-image-mobile"/>
+
+                                    <img src="assets/mobile1.png" alt="OKHealth Sign Up Frame Screenshot" class="project-image-mobile"/>
+
+                                    <img src="assets/mobile3.png" alt="OKHealth Sign Up Frame Screenshot" class="project-image-mobile"/>
+
+                                    <img src="assets/mobile4.png" alt="OKHealth Sign Up Frame Screenshot" class="project-image-mobile"/>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
