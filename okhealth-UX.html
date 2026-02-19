@@ -34,8 +34,8 @@
         </div>
         <div class="nav-links">
             <a href="about.html">about</a>
-            <a href="projects.html">projects</a>
-            <a href="personal.html" class="active">personal</a>
+            <a href="projects.html"  class="active">projects</a>
+            <a href="personal.html">personal</a>
         </div>
     </nav>
     <!-- the dots go back to the landing -->
@@ -104,5 +104,27 @@
             </div>
         </div>
     </main>
+
+    <button id="scrollToTop" class="scroll-to-top">↑</button>
+    <script>
+        const scrollBtn = document.getElementById('scrollToTop');
+
+        // Show button when user scrolls down
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
+
+        // Scroll to top when clicked
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>

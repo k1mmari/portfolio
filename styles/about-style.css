@@ -71,8 +71,9 @@ body {
 }
 
 /* About Section - same structure as index.html */
-.main-section {
-    width: 100%;
+.about-container {
+    width: min(90vw, 1440px);
+    margin: 0 auto;
 }
 
 .frame {

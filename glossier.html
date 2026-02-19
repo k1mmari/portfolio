@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OKHealth Brand</title>
-    <link rel="stylesheet" href="styles/okhealth-brand-style.css">
+    <title>Glossier Went Full Pic</title>
+    <link rel="stylesheet" href="styles/glossier-style.css">
     <!--- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,11 +34,11 @@
         </div>
         <div class="nav-links">
             <a href="about.html">about</a>
-            <a href="projects.html" class="active">projects</a>
-            <a href="personal.html">personal</a>
+            <a href="projects.html">projects</a>
+            <a href="personal.html" class="active">personal</a>
         </div>
     </nav>
-
+    <!-- the dots go back to the landing -->
     <script>
         document.querySelector('.nav-dots').addEventListener('click', function() {
             window.location.href = 'index.html';
@@ -49,45 +49,33 @@
         <div class="frame">
             <div class="project-content">
                 
-                <!--- Quackwell -->
                 <div class="project-card">
                     <div class="project-info">
                         <div class="project-header">
-                            <h2 class="project-title">OKHealth</h2>
-                            <img src="assets/okhealth_stack.png" alt="OKHealth Tech Stack" class="stack"/>
-
-                            <nav class="navbar-inside">
-                                <div class="nav-links-inside">
-                                    <a href="okhealth.html">overview</a>
-                                    <a href="okhealth-brand.html" class="active">brand</a>
-                                    <a href="okhealth-UI.html">UI</a>
-                                    <a href="okhealth-UX.html">UX</a>
-                                </div>
-                            </nav>
+                            <h2 class="project-title">Glossier Went Full Pink</h2>
                         </div>
-                        <!-- Main Section -->
+                        <!-- Design Direction -->
                         <div class="my-role">
-                            <p class="project-description">The brand was designed to soften the typically rigid nature of medical scheduling
-                            systems through a friendly, approachable tone. To support this, I created a mascot-style logo using two pills,
-                            introducing warmth and personality. This is intentionally contrasted with the clean, modern sans-serif typeface
-                            Rajdhani, maintaining clarity and professionalism.</p>
-                                <div class="project-card" style="background: linear-gradient(
-                                    to bottom,
-                                    rgba(228, 234, 241, 0.6),
-                                    rgba(134, 174, 223, 0.6)
-                                );">
-                                    <img src="assets/okhealth_logo.gif" alt="Pill Mascot Logo" class="project-image"/>
-                                    <img src="assets/pill_anim.gif" alt="Pill Mascot" class="project-image"/>
-                                </div>
-                            <p class="project-description">The mascot is not a central interactive element of the website,
-                                so it did not require high versatility. Instead, it was designed to align closely with the app’s
-                                overall visual style and color palette, reinforcing consistency across the product.</p>
+                            <div class="header-wrapper">
+                                <img src="assets/direction_icon.png" class="icons"/>
+                                <h1>Design Direction</h1>
                             </div>
+                            <p class="project-description">A self-initiated challenge to reinterpret Glossier’s brand page through a
+                                bolder visual lens. I explored a more saturated, statement-driven pink palette while preserving the brand’s
+                                soft typography, airy spacing, and approachable tone.</p>
+                                <div class="image-wrapper">
+
+                                    <video class="project-media clip" data-start="0" data-end="4" autoplay muted playsinline>
+                                        <source src="/assets/glossier.mov" type="video/mp4">
+                                    </video>
+                                    <img src="assets/glossierss.png" alt="Original Glossier Page" class="project-image"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </main>
-    <script>
+            </main>
+<script>
         document.addEventListener("DOMContentLoaded", () => {
             const clips = document.querySelectorAll("video.clip");
 
@@ -108,5 +96,6 @@
         });
     });
 </script>
+
 </body>
 </html>

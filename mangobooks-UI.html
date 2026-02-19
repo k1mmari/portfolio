@@ -77,7 +77,7 @@
                                 to a topic that is often nerve-wracking for clients—taxes.</p>
                                 <div class="image-wrapper">
 
-                                    <img src="assets/old_landing.png" alt="MangoBooks Old Landing Page" class="project-image";"/>
+                                    <img src="assets/old_landing.png" alt="MangoBooks Old Landing Page" class="project-image"/>
 
                                     <video class="project-media clip" data-start="0" data-end="1.6" autoplay muted playsinline>
                                         <source src="/assets/new_landing.mov" type="video/mp4">
@@ -110,26 +110,47 @@
             </div>
         </div>
     </main>
+    <button id="scrollToTop" class="scroll-to-top">↑</button>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const clips = document.querySelectorAll("video.clip");
+        const scrollBtn = document.getElementById('scrollToTop');
 
-            clips.forEach((video) => {
-            const start = parseFloat(video.dataset.start || "0");
-            const end = parseFloat(video.dataset.end || String(video.duration || 9999));
+        // Show button when user scrolls down
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
 
-            video.addEventListener("loadedmetadata", () => {
-                video.currentTime = start;
-                video.play().catch(() => {}); // ignore autoplay blocks
-            });
-
-            video.addEventListener("timeupdate", () => {
-                if (video.currentTime >= end) {
-                    video.currentTime = start;
-                }
+        // Scroll to top when clicked
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
-    });
-</script>
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const clips = document.querySelectorAll("video.clip");
+
+                clips.forEach((video) => {
+                const start = parseFloat(video.dataset.start || "0");
+                const end = parseFloat(video.dataset.end || String(video.duration || 9999));
+
+                video.addEventListener("loadedmetadata", () => {
+                    video.currentTime = start;
+                    video.play().catch(() => {}); // ignore autoplay blocks
+                });
+
+                video.addEventListener("timeupdate", () => {
+                    if (video.currentTime >= end) {
+                        video.currentTime = start;
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

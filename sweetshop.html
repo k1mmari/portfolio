@@ -80,24 +80,25 @@
                     </div>
                 </div>
             </main>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const clips = document.querySelectorAll("video.clip");
+    <button id="scrollToTop" class="scroll-to-top">↑</button>
 
-            clips.forEach((video) => {
-            const start = parseFloat(video.dataset.start || "0");
-            const end = parseFloat(video.dataset.end || String(video.duration || 9999));
+<script>
+    const scrollBtn = document.getElementById('scrollToTop');
 
-            video.addEventListener("loadedmetadata", () => {
-                video.currentTime = start;
-                video.play().catch(() => {}); // ignore autoplay blocks
-            });
+    // Show button when user scrolls down
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollBtn.classList.add('show');
+        } else {
+            scrollBtn.classList.remove('show');
+        }
+    });
 
-            video.addEventListener("timeupdate", () => {
-                if (video.currentTime >= end) {
-                    video.currentTime = start;
-                }
-            });
+    // Scroll to top when clicked
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
     });
 </script>

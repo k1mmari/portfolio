@@ -17,6 +17,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: clamp(16px, 3vw, 32px) clamp(24px, 5vw, 80px);
+    width: min(92vw, 1440px);
+    margin: 0 auto;
 
 }
 
@@ -113,7 +115,7 @@ body {
 }
 
 .frame {
-    width: min(92vw, 1800px);
+    width: min(92vw, 1440px);
     background-image: url("../assets/bg.png");
     background-size: cover;
     background-position: center;

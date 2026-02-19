@@ -17,6 +17,11 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: clamp(16px, 3vw, 32px) clamp(24px, 5vw, 80px);
+    .navbar{
+    width: min(90vw, 1440px);
+    margin: 0 auto;
+}
+
 
 }
 
@@ -75,7 +80,7 @@ body {
 }
 
 .frame {
-    width: min(92vw, 1800px);
+    width: min(92vw, 1440px);
     background-image: url("../assets/bg.png");
     background-size: cover;
     background-position: center;
@@ -100,7 +105,7 @@ body {
 
 .project-card {
     width: 100%;
-    height: 180px;
+    height: auto;
     background: linear-gradient(
         to bottom,
         rgba(44, 80, 128, 0.6),
@@ -132,9 +137,9 @@ body {
 }
 
 .project-header {
-  display: flex;
-  align-items: center;
-  gap: 12px; /* space between title and stack */
+    display: flex;
+    align-items: center;
+    gap: 12px; /* space between title and stack */
 }
 
 .project-title {
@@ -157,13 +162,14 @@ body {
 }
 
 .project-image {
-    width: clamp(100px, 10vw, 160px);
-    max-height: 160%;
+    width: 10%;
+    max-width: 280px;
+    min-width: 100px;
+    max-height: 100%;
     height: auto;
     object-fit: contain;
     border-radius: 10px;
-    margin-top: 10px;
-    margin-left: auto;
+    margin: 10px auto;
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));
 }
 

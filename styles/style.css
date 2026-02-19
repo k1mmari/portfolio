@@ -16,7 +16,7 @@ body {
 }
 
 .frame {
-    width: min(92vw, 1800px);
+    width: min(90vw, 1440px);
     margin: 0 auto;
 }
 
@@ -30,7 +30,7 @@ body {
 .hero-title {
     position: absolute;
     bottom: clamp(20px, 6vw, 80px);
-    left: clamp(20px, 4vw, 60px);
+    left: clamp(20px, 6vw, 80px);
     z-index: 1;
     color: #fff;
     font-family: "Archivo Black", sans-serif;

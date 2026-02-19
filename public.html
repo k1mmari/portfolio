@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Hotel Website</title>
-    <link rel="stylesheet" href="styles/hotel-style.css">
+    <title>Landing Page Vibes</title>
+    <link rel="stylesheet" href="styles/public-style.css">
     <!--- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,52 +49,43 @@
         <div class="frame">
             <div class="project-content">
                 
-                <!--- Quackwell -->
                 <div class="project-card">
                     <div class="project-info">
                         <div class="project-header">
-                            <h2 class="project-title">Modern Hotel Website</h2>
+                            <h2 class="project-title">Public Storage But Make It A24</h2>
                         </div>
-                        <!-- Role and Scope -->
-                        <div class="my-role">
-                            <div class="header-wrapper">
-                                <img src="assets/role_icon.png" class="icons"/>
-                                <h1>Role and Scope</h1>
-                            </div>
-                            <p class="project-description">Semester-long team project with three developers.
-                                I led the overall product design, user flow, and visual direction, defining the end-to-end experience.</p>
-                            </div>
                         <!-- Design Direction -->
                         <div class="my-role">
                             <div class="header-wrapper">
-                                <img src="assets/component_icon.png" class="icons"/>
+                                <img src="assets/direction_icon.png" class="icons"/>
                                 <h1>Design Direction</h1>
                             </div>
-                            <p class="project-description">A minimalist, modern interface designed to evoke a sense of luxury
-                                and high-end travel. Dark tones paired with high-contrast white elements create clarity while
-                                reinforcing a premium aesthetic. Content is organized into clearly defined cards to support structure
-                                and scannability.</p>
+                            <p class="project-description">An experimental concept redesign exploring how a storage company’s digital
+                                presence could shift from purely transactional to cinematic and emotionally resonant.</p>
                                 <div class="image-wrapper">
-                                    <img src="assets/hotel.png" alt="Hotel Search Screenshot" class="project-image"/>
 
-                                    <img src="assets/hotel2.png" alt="Hotel Search Result Screenshot" class="project-image"/>
-
-                                    <img src="assets/hotel4.png" alt="Hotel Details Screenshot" class="project-image"/>
-
-                                    <img src="assets/hotel3.png" alt="Hotel Booking Screenshot" class="project-image"/>
-
+                                    <video class="project-media clip" data-start="0" data-end="2.5" autoplay muted playsinline>
+                                        <source src="/assets/publicStorage.mov" type="video/mp4">
+                                    </video>
+                                    <img src="assets/public_search.png" alt="Public Storage A24 Search" class="project-image"/>
                                 </div>
                             </div>
-
-                            <!-- UX Apprpoach -->
+                            <!-- Responsiveness -->
                         <div class="my-role">
                             <div class="header-wrapper">
-                                <img src="assets/ux_icon.png" class="icons"/>
-                                <h1>UX Approach</h1>
+                                <img src="assets/responsiveness_icon.png" class="icons"/>
+                                <h1>Responsiveness</h1>
                             </div>
-                            <p class="project-description">The UX follows familiar booking patterns,
-                                intentionally simplified to reduce complexity and support lightweight implementation using vanilla HTML and CSS.</p>
+                            <p class="project-description">The mobile version preserves the cinematic tone while prioritizing clarity
+                                and hierarchy. Large typography, focused search inputs, and simplified navigation ensure the experience
+                                remains atmospheric without sacrificing usability on smaller screens.</p>
+                                <div class="image-wrapper">
+
+                                    <img src="assets/storage_langing_mobile.png" alt="Public Storage A24 Mobile Landing" class="project-image-mobile"/>
+                                    <img src="assets/storage_nav.png" alt="Public Storage A24 Mobile Menu" class="project-image-mobile"/>
+                                </div>
                             </div>
+                        
                         </div>
                     </div>
                 </div>
@@ -121,5 +112,28 @@
         });
     });
 </script>
+
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const clips = document.querySelectorAll("video.clip");
+
+            clips.forEach((video) => {
+            const start = parseFloat(video.dataset.start || "0");
+            const end = parseFloat(video.dataset.end || String(video.duration || 9999));
+
+            video.addEventListener("loadedmetadata", () => {
+                video.currentTime = start;
+                video.play().catch(() => {}); // ignore autoplay blocks
+            });
+
+            video.addEventListener("timeupdate", () => {
+                if (video.currentTime >= end) {
+                    video.currentTime = start;
+                }
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
