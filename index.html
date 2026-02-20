@@ -10,15 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 </head>
-<script>
-    function checkDevice() {
-        if (window.innerWidth <= 768) {
-            window.location.href = 'mobile.html';
-        }
-    }
-    checkDevice();
-    window.addEventListener('resize', checkDevice);
-</script>
 <body>
 <div class="hero-container">
     <nav class="navbar">
@@ -30,12 +21,13 @@
             <span class="dot dot-5"></span>
         </div>
         <div class="nav-links">
+            <a href="index.html" class="mobile-only active">home</a>
             <a href="about.html">about</a>
             <a href="projects.html">projects</a>
             <a href="personal.html">personal</a>
         </div>
     </nav>
-    
+
     <header class="main-section">
         <div class="frame">
             <img src="assets/bg.png" alt="" class="hero-image"/>
@@ -48,7 +40,6 @@
         </div>
     </header>
 </div>
-
     <main>
     </main>
 </body>

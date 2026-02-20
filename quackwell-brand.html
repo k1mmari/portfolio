@@ -13,16 +13,6 @@
     <!--- Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<script>
-    function checkDevice() {
-        if (window.innerWidth <= 768) {
-            window.location.href = 'projects-mobile.html';
-        }
-    }
-    checkDevice();
-    window.addEventListener('resize', checkDevice);
-</script>
-
 <body>
     <nav class="navbar">
         <div class="nav-dots">
@@ -33,6 +23,7 @@
             <span class="dot dot-5"></span>
         </div>
         <div class="nav-links">
+            <a href="index.html" class="mobile-only">home</a>
             <a href="about.html">about</a>
             <a href="projects.html" class="active">projects</a>
             <a href="personal.html">personal</a>
@@ -56,7 +47,7 @@
                             <h2 class="project-title">Quackwell</h2>
                             <img src="assets/quackwell_stack.png" alt="Quackwell Tech Stack" class="stack"/>
 
-                            <nav class="navbar-inside">
+                            <nav class="navbar-inside desktop-only">
                                 <div class="nav-links-inside">
                                     <a href="quackwell.html">overview</a>
                                     <a href="quackwell-brand.html" class="active">brand</a>
@@ -64,7 +55,16 @@
                                     <a href="quackwell-UX.html">UX</a>
                                 </div>
                             </nav>
+
                         </div>
+                        <nav class="navbar-inside mobile-only">
+                                <div class="nav-links-inside">
+                                    <a href="quackwell.html">overview</a>
+                                    <a href="quackwell-brand.html" class="active">brand</a>
+                                    <a href="quackwell-UI.html">UI</a>
+                                    <a href="quackwell-UX.html">UX</a>
+                                </div>
+                            </nav>
                         <p class="project-description">The app relies heavily on its mascot for user retention and for
                             reflecting progress and regression. Due to limited resources, stock animations were not viable,
                             making a custom mascot both practical and intentional.</p>
@@ -104,6 +104,27 @@
             </div>
         </div>
     </main>
+    <button id="scrollToTop" class="scroll-to-top">↑</button>
+    <script>
+        const scrollBtn = document.getElementById('scrollToTop');
+
+        // Show button when user scrolls down
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
+
+        // Scroll to top when clicked
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const clips = document.querySelectorAll("video.clip");

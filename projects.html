@@ -13,16 +13,6 @@
     <!--- Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<script>
-    function checkDevice() {
-        if (window.innerWidth <= 768) {
-            window.location.href = 'projects-mobile.html';
-        }
-    }
-    checkDevice();
-    window.addEventListener('resize', checkDevice);
-</script>
-
 <body>
     <nav class="navbar">
         <div class="nav-dots">
@@ -33,6 +23,7 @@
             <span class="dot dot-5"></span>
         </div>
         <div class="nav-links">
+            <a href="index.html" class="mobile-only">home</a>
             <a href="about.html">about</a>
             <a href="projects.html" class="active">projects</a>
             <a href="personal.html">personal</a>
@@ -56,9 +47,13 @@
                                 <h2 class="project-title">Quackwell</h2>
                                 <img src="assets/quackwell_stack.png" alt="Quackwell Tech Stack" class="stack"/>
                             </div>
-                            <p class="project-description">A wellness mobile app that helps with daily productivity and wellness habits.
+                            <p class="project-description desktop-only">A wellness mobile app that helps with daily productivity and wellness habits.
                                 It includes features such as a To-Do Planner, Hydration Reminder, Calm/Focus Sessions, Community,
                                 and Virtual Pet (Quackwell) that tracks the User's progress.</p>
+
+                            <p class="project-description mobile-only">A wellness mobile app that helps with daily productivity and wellness habits.
+                                It includes features such as a To-Do Planner, Hydration Reminder...</p>
+
                         </div>
                         <img src="assets/quackwell_mockup.png" alt="Quackwell App Screenshot" class="project-image"/>
                     </div>
@@ -86,9 +81,13 @@
                                 <h2 class="project-title">MangoBooks</h2>
                                 <img src="assets/figma.png" alt="Figma Logo" class="stack"/>
                             </div>
-                            <p class="project-description">A CPA firm website designed to provide clear information about services,
+                            <p class="project-description desktop-only">A CPA firm website designed to provide clear information about services,
                                 contact details, and client resources, while establishing trust and professionalism for prospective
                                 and existing clients.</p>
+
+                            <p class="project-description mobile-only">A CPA firm website designed to provide clear information about services,
+                                contact details, and client resources....</p>
+
                         </div>
                         <img src="assets/mango_mockup.png" alt="MangoBooks App Screenshot" class="project-image"/>
                     </div>
