@@ -15,4 +15,4 @@ Personal portfolio website showcasing UI/UX and front-end projects.
 In progress.
 
 ## Live
-[Link will be added after deployment]
+https://k1mmari.github.io/portfolio/
