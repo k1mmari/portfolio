@@ -366,6 +366,26 @@ h1 {
     .stack{
         transform: translateY(-5px);
     }
+    .project-description {
+        width: 98%;
+        line-height: 2;
+    }
+    .nav-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-wrapper .navbar-inside {
+        width: auto;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+    .nav-links-inside{
+        justify-content: center; /* also center the links row */
+        flex-wrap: wrap;         /* prevents overflow */
+    }
 }
 
 .mobile-only{ display: none; }

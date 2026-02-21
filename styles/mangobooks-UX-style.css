@@ -285,3 +285,102 @@ h1 {
     background: #5A8AC0;
     transform: translateY(-3px);
 }
+
+@media (max-width: 768px) {
+    @media (max-width: 768px) {
+        body {
+        background: url("../assets/bg.png") center / cover no-repeat;
+        min-height: 100svh;
+    }
+    .frame {
+    background-image: none;
+        width: 100%;
+    }
+
+    .main-section {
+        background: transparent;
+    }
+}
+
+    .hero-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    .hero-title,
+    .navbar {
+        position: absolute;
+        z-index: 10;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        border-radius: 50px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+        width: fit-content;
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    .nav-dots { display: none; } /* optional: pills are cleaner without dots */
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .project-card {
+        margin-top: 3.5rem;
+    }
+    .stack{
+        transform: translateY(-5px);
+    }
+    .project-description {
+        width: 98%;
+    }
+    .project-image {
+        width: clamp(480px, 29vw, 550px);
+    }
+    .project-description {
+        width: 98%;
+        line-height: 2;
+    }
+     .nav-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-wrapper .navbar-inside {
+        width: auto;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+    .nav-links-inside{
+        justify-content: center; /* also center the links row */
+        flex-wrap: wrap;         /* prevents overflow */
+    }
+}
+
+.mobile-only{ display: none; }
+
+@media (max-width: 768px){
+    .desktop-only{ display: none; }
+    .mobile-only{ display: block; }
+}

@@ -13,16 +13,6 @@
     <!--- Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<script>
-    function checkDevice() {
-        if (window.innerWidth <= 768) {
-            window.location.href = 'mangobooks-mobile.html';
-        }
-    }
-    checkDevice();
-    window.addEventListener('resize', checkDevice);
-</script>
-
 <body>
     <nav class="navbar">
         <div class="nav-dots">
@@ -33,6 +23,7 @@
             <span class="dot dot-5"></span>
         </div>
         <div class="nav-links">
+            <a href="index.html" class="mobile-only">home</a>
             <a href="about.html">about</a>
             <a href="projects.html" class="active">projects</a>
             <a href="personal.html">personal</a>
@@ -54,7 +45,7 @@
                             <h2 class="project-title">MangoBooks</h2>
                             <img src="assets/figma.png" alt="Figma Logo" class="stack"/>
 
-                            <nav class="navbar-inside">
+                            <nav class="navbar-inside desktop-only">
                                 <div class="nav-links-inside">
                                     <a href="mangobooks.html" class="active">overview</a>
                                     <a href="mangobooks_brand.html">brand</a>
@@ -63,6 +54,18 @@
                                 </div>
                             </nav>
                         </div>
+
+                        <div class="nav-wrapper mobile-only">
+                            <nav class="navbar-inside">
+                                    <div class="nav-links-inside">
+                                        <a href="mangobooks.html" class="active">overview</a>
+                                        <a href="mangobooks_brand.html">brand</a>
+                                        <a href="mangobooks-UI.html">UI</a>
+                                        <a href="mangobooks-UX.html">UX</a>
+                                    </div>
+                                </nav>
+                        </div>
+
                         <p class="project-description">A CPA firm website designed to provide clear information about services,
                             contact details, and client resources, while establishing trust and professionalism for prospective and
                             existing clients.</p>
@@ -110,6 +113,27 @@
             </div>
         </div>
     </main>
+    <button id="scrollToTop" class="scroll-to-top">↑</button>
+    <script>
+        const scrollBtn = document.getElementById('scrollToTop');
+
+        // Show button when user scrolls down
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
+
+        // Scroll to top when clicked
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const clips = document.querySelectorAll("video.clip");

@@ -77,6 +77,8 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: clamp(16px, 3vw, 32px) clamp(24px, 5vw, 80px);
+    width: min(90vw, 1440px);
+    margin: 0 auto;
     /* background: rgba(255, 255, 255, 0.95); */
 }
 
@@ -166,6 +168,7 @@ main {
 
 @media (max-width: 768px) {
     .navbar {
+        position: fixed;
         top: 16px;
         left: 50%;
         transform: translateX(-50%);

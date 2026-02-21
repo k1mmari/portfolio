@@ -161,13 +161,8 @@ body {
 }
 
 .project-card-inside {
-    width: 100%;
+    width: 95%;
     height: auto;
-    background: linear-gradient(
-        to bottom,
-        rgba(44, 80, 128, 0.6),
-        rgba(121, 159, 206, 0.6)
-    );
     backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.35);
@@ -181,7 +176,6 @@ body {
     flex-shrink: 0;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
 
 .project-info {
     flex: 1;
@@ -350,12 +344,27 @@ h1 {
     }
 
     .project-image {
-        width: clamp(120px, 12vw, 200px);
-        max-height: 100%;
-        height: auto;
-        object-fit: contain;
-        border-radius: 10px;
-        margin-top: 10px;
+        width: clamp(120px, 12vw, 140px);
+    }
+    .project-description {
+        width: 98%;
+        line-height: 2;
+    }
+    .nav-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-wrapper .navbar-inside {
+        width: auto;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+    .nav-links-inside{
+        justify-content: center; /* also center the links row */
+        flex-wrap: wrap;         /* prevents overflow */
     }
 }
 

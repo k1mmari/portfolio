@@ -13,16 +13,6 @@
     <!--- Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<script>
-    function checkDevice() {
-        if (window.innerWidth <= 768) {
-            window.location.href = 'projects-mobile.html';
-        }
-    }
-    checkDevice();
-    window.addEventListener('resize', checkDevice);
-</script>
-
 <body>
     <nav class="navbar">
         <div class="nav-dots">
@@ -33,6 +23,7 @@
             <span class="dot dot-5"></span>
         </div>
         <div class="nav-links">
+            <a href="index.html" class="mobile-only">home</a>
             <a href="about.html">about</a>
             <a href="projects.html" class="active">projects</a>
             <a href="personal.html">personal</a>
@@ -57,7 +48,7 @@
                             <img src="assets/figma.png" alt="Figma Logo" class="stack"/>
 
                             <nav class="navbar-inside">
-                                <div class="nav-links-inside">
+                                <div class="nav-links-inside desktop-only">
                                     <a href="mangobooks.html">overview</a>
                                     <a href="mangobooks_brand.html" class="active">brand</a>
                                     <a href="mangobooks-UI.html">UI</a>
@@ -65,6 +56,18 @@
                                 </div>
                             </nav>
                         </div>
+
+                        <div class="nav-wrapper mobile-only">
+                            <nav class="navbar-inside">
+                                    <div class="nav-links-inside">
+                                        <a href="mangobooks.html">overview</a>
+                                        <a href="mangobooks_brand.html" class="active">brand</a>
+                                        <a href="mangobooks-UI.html">UI</a>
+                                        <a href="mangobooks-UX.html">UX</a>
+                                    </div>
+                                </nav>
+                        </div>
+
                         <!-- Main Section -->
                         <div class="my-role">
                             <p class="project-description">I took the opportunity to redesign the logo as well,
@@ -72,12 +75,13 @@
                                 The goal was to help the firm stand out in a crowded CPA market dominated by conservative,
                                 look-alike branding. While preserving a light, approachable character, the redesign prioritizes
                                 improved readability and clarity across various sizes and digital contexts.</p>
-                                <div class="project-card" style="background: linear-gradient(
+                                <div class="project-card-inside" style="background: linear-gradient(
                                     to bottom,
-                                    rgba(207, 216, 227, 0.6),
-                                    rgba(128, 171, 224, 0.6)
+                                    rgba(228, 234, 241, 0.6),
+                                    rgba(134, 174, 223, 0.6)
                                 );">
-                                    <img src="assets/logos.png" alt="Old and New MangoBooks Logo" class="project-image" style="width: 600px;"/>
+                                    <img src="assets/old_logo.png" alt="Old MangoBooks Logo" class="project-image"/>
+                                    <img src="assets/new_mango_logo.png" alt="New MangoBooks Logo" class="project-image"/>
                                 </div>
                             <p class="project-description">Typography became the primary focus of the logo redesign, using a clean sans-serif
                                 typeface to improve legibility and scalability. The previous logo relied on small, detailed typography that did
@@ -91,6 +95,26 @@
             </div>
         </div>
     </main>
+    <script>
+        const scrollBtn = document.getElementById('scrollToTop');
+
+        // Show button when user scrolls down
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
+
+        // Scroll to top when clicked
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const clips = document.querySelectorAll("video.clip");
