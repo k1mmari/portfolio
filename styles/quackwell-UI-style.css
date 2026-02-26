@@ -343,6 +343,7 @@ h1 {
         width: fit-content;
         display: inline-flex;
         justify-content: center;
+        width: 95%;
     }
 
     .nav-dots { display: none; } /* optional: pills are cleaner without dots */
@@ -352,7 +353,7 @@ h1 {
     }
 
     .nav-links a {
-        font-size: 16px;
+        font-size: 15px;
         padding: 6px 12px;
     }
 
@@ -382,6 +383,9 @@ h1 {
     .nav-links-inside{
         justify-content: center; /* also center the links row */
         flex-wrap: wrap;         /* prevents overflow */
+    }
+    .nav-links-inside a {
+        font-size: clamp(8px, 3vw, 10px);
     }
 }
 

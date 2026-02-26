@@ -225,7 +225,7 @@ body {
         position: absolute;
         inset: 0;
         width: 100%;
-        height: 100%;
+        height: 120%;
         object-fit: cover;
         z-index: 0;
     }
@@ -248,7 +248,7 @@ body {
         background: rgba(255, 255, 255, 0.9);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-        width: fit-content;
+        width: 95%;
         display: inline-flex;
         justify-content: center;
     }
@@ -260,20 +260,44 @@ body {
     }
 
     .nav-links a {
-        font-size: 16px;
+        font-size: 15px;
         padding: 6px 12px;
     }
 
     .project-card {
-        height: 250px;
-        margin-top: 0;
+        height: 350px;
+        margin-top: 0px;
     }
     .project-card-1 {
         margin-top: 3.5rem;
+        height: 350px;
     }
 
     .project-title {
-        margin-bottom: 10px;
+        font-size: clamp(1.2rem, 5vw, 2rem);
+    }
+
+    .project-description {
+        font-size: clamp(0.9rem, 1vw, 1.1rem);
+        line-height: 1.6;
+        color: white;
+        width: 80%;
+    }
+    .stack {
+        max-width: 100%;
+        height: 18px;
+        flex: 0 0 auto;
+        transform: translateY(-5px);
+    }
+    .project-header {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        
+    }
+    .project-info {
+        flex: 1;
+        color: white;
+        overflow: hidden; 
     }
 }
 

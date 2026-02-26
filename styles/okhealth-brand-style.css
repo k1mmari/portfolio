@@ -168,6 +168,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 20px;
     padding: clamp(15px, 2vw, 25px);
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -323,6 +324,7 @@ h1 {
         width: fit-content;
         display: inline-flex;
         justify-content: center;
+        width: 95%;
     }
 
     .nav-dots { display: none; } /* optional: pills are cleaner without dots */
@@ -332,7 +334,7 @@ h1 {
     }
 
     .nav-links a {
-        font-size: 16px;
+        font-size: 15px;
         padding: 6px 12px;
     }
 
@@ -344,10 +346,10 @@ h1 {
     }
 
     .project-image {
-        width: clamp(120px, 12vw, 140px);
+        width: clamp(80px, 10vw, 100px);
     }
     .project-description {
-        width: 98%;
+        width: 95%;
         line-height: 2;
     }
     .nav-wrapper {
@@ -365,6 +367,9 @@ h1 {
     .nav-links-inside{
         justify-content: center; /* also center the links row */
         flex-wrap: wrap;         /* prevents overflow */
+    }
+    .nav-links-inside a {
+        font-size: clamp(8px, 3vw, 10px);
     }
 }
 

@@ -159,6 +159,8 @@ body {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+
+
 .project-info {
     flex: 1;
     color: white;
@@ -328,7 +330,7 @@ h1 {
         background: rgba(255, 255, 255, 0.9);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-        width: fit-content;
+        width: 95%;
         display: inline-flex;
         justify-content: center;
     }
@@ -340,23 +342,25 @@ h1 {
     }
 
     .nav-links a {
-        font-size: 16px;
+        font-size: 15px;
         padding: 6px 12px;
     }
 
     .project-card {
         margin-top: 3.5rem;
+        width: 100%;
     }
     .stack{
         transform: translateY(-5px);
     }
-    .project-description {
-        width: 98%;
-
+    .project-image {
+        width: 80%;
     }
-
+    .project-media {
+        width: 80%;
+    }
     .project-description {
-        width: 98%;
+        width: auto;
         line-height: 2;
     }
     .nav-wrapper {
@@ -374,6 +378,9 @@ h1 {
     .nav-links-inside{
         justify-content: center; /* also center the links row */
         flex-wrap: wrap;         /* prevents overflow */
+    }
+    .nav-links-inside a {
+        font-size: clamp(8px, 3vw, 10px);
     }
 }
 

@@ -221,7 +221,7 @@ body {
 }
 
 .project-media {
-    width: clamp(380px, 28vw, 600px);
+    width: clamp(380px, 32vw, 600px);
     max-height: 100%;
     height: auto;
     object-fit: contain;
@@ -318,7 +318,7 @@ h1 {
         background: rgba(255, 255, 255, 0.9);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-        width: fit-content;
+        width: 95%;
         display: inline-flex;
         justify-content: center;
     }
@@ -330,16 +330,27 @@ h1 {
     }
 
     .nav-links a {
-        font-size: 16px;
+        font-size: 15px;
         padding: 6px 12px;
     }
 
     .project-card {
         margin-top: 3.5rem;
     }
-
+    .project-image {
+        width: 90%;
+    }
+    .project-image-mobile {
+        width: 90%;
+    }
+    .project-media {
+        width: 90%;
+    }
     .project-title {
         margin-bottom: 10px;
+    }
+    .nav-links-inside a {
+        font-size: clamp(8px, 3vw, 10px);
     }
 }
 

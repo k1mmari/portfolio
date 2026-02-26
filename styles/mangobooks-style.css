@@ -304,7 +304,7 @@ h1 {
         background: rgba(255, 255, 255, 0.9);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-        width: fit-content;
+        width: 95%;
         display: inline-flex;
         justify-content: center;
     }
@@ -316,7 +316,7 @@ h1 {
     }
 
     .nav-links a {
-        font-size: 16px;
+        font-size: 15px;
         padding: 6px 12px;
     }
 
@@ -329,6 +329,9 @@ h1 {
     .project-description {
         width: 98%;
         line-height: 2;
+    }
+    .project-image {
+        width: 80%;;
     }
     .nav-wrapper {
         width: 100%;
@@ -345,6 +348,9 @@ h1 {
     .nav-links-inside{
         justify-content: center; /* also center the links row */
         flex-wrap: wrap;         /* prevents overflow */
+    }
+    .nav-links-inside a {
+        font-size: clamp(8px, 3vw, 10px);
     }
 }
 

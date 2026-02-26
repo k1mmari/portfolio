@@ -357,7 +357,7 @@ h1 {
         background: rgba(255, 255, 255, 0.9);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-        width: fit-content;
+        width: 95%;
         display: inline-flex;
         justify-content: center;
     }
@@ -369,7 +369,7 @@ h1 {
     }
 
     .nav-links a {
-        font-size: 16px;
+        font-size: 15px;
         padding: 6px 12px;
     }
 
@@ -384,7 +384,7 @@ h1 {
 
     }
     .project-image {
-        width: clamp(150px, 10vw, 180px);
+        width: clamp(80px, 12vw, 100px);
         height: auto;
         object-fit: contain;
         border-radius: 10px;
@@ -409,6 +409,9 @@ h1 {
     .nav-links-inside{
         justify-content: center; /* also center the links row */
         flex-wrap: wrap;         /* prevents overflow */
+    }
+    .nav-links-inside a {
+        font-size: clamp(8px, 3vw, 10px);
     }
 }
 
