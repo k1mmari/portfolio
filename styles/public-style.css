@@ -221,7 +221,7 @@ body {
 }
 
 .project-media {
-    width: clamp(380px, 32vw, 600px);
+    width: clamp(385px, 33.5vw, 609px);
     max-height: 100%;
     height: auto;
     object-fit: contain;
