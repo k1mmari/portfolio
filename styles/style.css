@@ -138,8 +138,8 @@ main {
 
 @media (max-width: 768px) {
     .hero-container,
-    .main-section,
-    .frame {
+    .main-section {
+        height: 100%;
         width: 100%;
         margin: 0;
     }
@@ -147,12 +147,13 @@ main {
     .frame {
         position: relative;
         min-height: 100svh;  /* full screen on mobile */
+        min-width: 100%;
         overflow: hidden;
     }
 
     .hero-image {
         position: absolute;
-        inset: 0;            /* top/right/bottom/left: 0 */
+        inset: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;   /* THIS makes it act like a background */
@@ -177,7 +178,6 @@ main {
         background: rgba(255, 255, 255, 0.9);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-        width: fit-content;
         display: inline-flex;
         justify-content: center;
         width: 95%;
