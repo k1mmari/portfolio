@@ -69,9 +69,15 @@ body {
 /* Main content styles */
 main {
     max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    margin: 0;
+    padding: 0;
 }
+
+.hero-container {
+    position: relative;
+    height: 100vh;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -110,7 +116,7 @@ main {
 .nav-links a {
     text-decoration: none;
     color: #2C5080;
-    font-size: clamp(20px, 1.5vw, 16px);
+    font-size: clamp(16px, 1.5vw, 20px);
     padding: 8px 16px;
     border-radius: 20px;
     transition: background 0.3s;
@@ -128,11 +134,6 @@ main {
 
 .nav-links a.active:hover {
     background: #5A8AC0;
-}
-
-.hero-container {
-    position: relative;
-    min-height: 100vh;
 }
 
 
